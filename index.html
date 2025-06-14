@@ -26,13 +26,17 @@
         }
 
         .header {
-            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(52, 152, 219, 0.85)), url('images/Namibia_PCA214.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: white;
             padding: 40px 30px;
             border-radius: 10px;
             margin-bottom: 30px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
         }
 
         .profile-img {
@@ -47,6 +51,15 @@
             justify-content: center;
             font-size: 40px;
             color: #666;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
 
         .header h1 {
@@ -226,7 +239,7 @@
         <!-- Header Section -->
         <header class="header">
             <div class="profile-img">
-                <img src="images/pedro-photo.jpg" alt="Pedro Gonçalves" style="width: 100%; height: 100%; object-fit: cover; border-radius: 70%;">
+                <img src="images/pedro-photo.jpg" alt="Pedro Gonçalves" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
             </div>
             <h1>Pedro Miguel da Mata Gonçalves</h1>
             <p class="subtitle">Senior GIS Specialist & Remote Sensing Expert</p>
