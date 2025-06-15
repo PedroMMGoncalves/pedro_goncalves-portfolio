@@ -187,7 +187,7 @@
             background: linear-gradient(45deg, #27ae60, #2ecc71);
             color: white;
         }
-        
+
         .level-badge.advanced {
             background: linear-gradient(45deg, #3498db, #2980b9);
             color: white;
@@ -197,11 +197,7 @@
             background: linear-gradient(45deg, #f39c12, #e67e22);
             color: white;
         }
-        .level-badge.intermediate {
-            background: linear-gradient(45deg, #f39c12, #e67e22);
-            color: white;
-        }
-
+        
         .language-skills {
             display: flex;
             flex-direction: column;
@@ -328,12 +324,6 @@
                 height: 60px;
             }
         }
-        .skills-grid-new {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
         .experience-item, .education-item, .project-item {
             margin-bottom: 25px;
             padding: 20px;
@@ -443,7 +433,7 @@
             font-size: 0.85em;
             font-weight: 600;
         }
-
+        /* Skills & Technology Section CSS */
         .software-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -571,6 +561,57 @@
             .category-meta {
                 justify-content: center;
             }
+        }
+
+
+        /* Enhanced Software Logo Handling for Different Formats */
+        .software-logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 15px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .software-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: grayscale(20%);
+            transition: all 0.3s ease;
+        }
+
+        /* Special handling for wide/lengthy logos */
+        .software-logo.wide-logo {
+            width: 120px;
+            height: 50px;
+        }
+
+        .software-logo.wide-logo img {
+            max-width: 110px;
+            max-height: 40px;
+        }
+
+        /* Special handling for very wide logos */
+        .software-logo.extra-wide-logo {
+            width: 140px;
+            height: 45px;
+        }
+
+        .software-logo.extra-wide-logo img {
+            max-width: 130px;
+            max-height: 35px;
+        }
+
+        .software-item:hover .software-logo img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
         }
         .current-position {
             background: linear-gradient(45deg, #e74c3c, #c0392b);
@@ -763,7 +804,6 @@
                 height: 60px;
             }
         }
-
         .project-status {
             display: inline-block;
             padding: 3px 8px;
@@ -976,14 +1016,14 @@
             <h2>Skills & Technology</h2>
             
             <div class="skills-categories">
-                <!-- GIS & Spatial Analysis -->
+                <!-- Cartographic Design -->
                 <div class="skill-category">
                     <div class="category-header">
                         <div class="category-icon">
-                            <i class="fas fa-globe"></i>
+                            <i class="fas fa-map"></i>
                         </div>
                         <div class="category-info">
-                            <h3>GIS & Spatial Analysis</h3>
+                            <h3>Cartographic Design</h3>
                             <div class="category-meta">
                                 <span class="experience-badge">8+ Years</span>
                                 <span class="proficiency-badge">Expert Level</span>
@@ -992,13 +1032,67 @@
                     </div>
                     
                     <div class="category-description">
-                        Advanced spatial modeling, geodatabase management, and complex analytical workflows. Leading enterprise GIS implementations and spatial data architecture design.
+                        Professional cartographic design and map production utilizing industry-standard software for creating publication-ready maps and visual communications. Expert in cartographic principles, color theory, and typography for effective spatial data visualization. Proficient in multi-scale map production, from detailed technical drawings to large-format poster presentations. Advanced skills in layout design, legend creation, and integration of multiple data sources into cohesive visual narratives for scientific publications and stakeholder presentations.
                     </div>
                     
                     <div class="software-grid">
                         <div class="software-item">
                             <div class="software-logo">
-                                <img src="images/logos/arcgis-logo.png" alt="ArcGIS Pro" />
+                                <img src="images/logos/coreldraw-logo.png" alt="CorelDRAW" />
+                            </div>
+                            <div class="software-name">CorelDRAW</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/incscape-logo.png" alt="Inkscape" />
+                            </div>
+                            <div class="software-name">Inkscape</div>
+                            <div class="software-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/qgis-logo.png" alt="QGIS" />
+                            </div>
+                            <div class="software-name">QGIS</div>
+                            <div class="software-level level-expert">Expert</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/arcgis-pro-logo.png" alt="ArcGIS Pro" />
+                            </div>
+                            <div class="software-name">ArcGIS Pro</div>
+                            <div class="software-level level-expert">Expert</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spatial Data Creation and Analysis -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>Spatial Data Creation and Analysis</h3>
+                            <div class="category-meta">
+                                <span class="experience-badge">8+ Years</span>
+                                <span class="proficiency-badge">Expert Level</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-description">
+                        Advanced spatial analysis and geodatabase management with expertise in complex analytical workflows and spatial modeling. Proficient in editing, analysis, spatial statistics, and geoprocessing automation. Specialized in georeferencing, geodatabase design, topology validation, and spatial data quality assessment. Experience in topographic, network, and hydrological analysis and modeling for environmental and geological applications. Development of custom geoprocessing tools and model builder workflows for standardized analytical procedures, and data ingestion and processing.
+                    </div>
+                    
+                    <div class="software-grid">
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/arcgis-pro-logo.png" alt="ArcGIS Pro" />
                             </div>
                             <div class="software-name">ArcGIS Pro</div>
                             <div class="software-level level-expert">Expert</div>
@@ -1014,30 +1108,38 @@
                         
                         <div class="software-item">
                             <div class="software-logo">
-                                <img src="images/logos/postgis-logo.png" alt="PostGIS" />
+                                <img src="images/logos/grass-green.png" alt="GRASS GIS" />
                             </div>
-                            <div class="software-name">PostGIS</div>
+                            <div class="software-name">GRASS GIS</div>
                             <div class="software-level level-advanced">Advanced</div>
                         </div>
                         
                         <div class="software-item">
-                            <div class="software-logo">
-                                <img src="images/logos/fme-logo.png" alt="FME" />
+                            <div class="software-logo wide-logo">
+                                <img src="images/logos/saga_logo.png" alt="SAGA GIS" />
                             </div>
-                            <div class="software-name">FME</div>
+                            <div class="software-name">SAGA GIS</div>
+                            <div class="software-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/arcgis-field-maps-logo.png" alt="ArcGIS Field Maps" />
+                            </div>
+                            <div class="software-name">ArcGIS Field Maps</div>
                             <div class="software-level level-advanced">Advanced</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Remote Sensing -->
+                <!-- Satellite Remote Sensing -->
                 <div class="skill-category">
                     <div class="category-header">
                         <div class="category-icon">
                             <i class="fas fa-satellite-dish"></i>
                         </div>
                         <div class="category-info">
-                            <h3>Remote Sensing & Image Processing</h3>
+                            <h3>Satellite Remote Sensing</h3>
                             <div class="category-meta">
                                 <span class="experience-badge">6+ Years</span>
                                 <span class="proficiency-badge">Expert Level</span>
@@ -1046,13 +1148,13 @@
                     </div>
                     
                     <div class="category-description">
-                        Satellite imagery processing, hyperspectral analysis, and change detection. Integration of Sentinel, Landsat, and commercial satellite data for geological and environmental monitoring.
+                        Satellite imagery acquisition, processing and analysis covering multispectral and SAR. Ability to perform atmospheric correction, radiometric calibration, and apply change detection algorithms. Advanced skills in spectral analysis for geological mineral mapping, vegetation monitoring, and land cover classification. Proficient with Google Earth Engine for cloud-based processing of large-scale Earth observation datasets.
                     </div>
                     
                     <div class="software-grid">
                         <div class="software-item">
-                            <div class="software-logo">
-                                <img src="images/logos/envi-logo.png" alt="ENVI" />
+                            <div class="software-logo wide-logo">
+                                <img src="images/logos/envi.png" alt="ENVI" />
                             </div>
                             <div class="software-name">ENVI</div>
                             <div class="software-level level-expert">Expert</div>
@@ -1060,23 +1162,23 @@
                         
                         <div class="software-item">
                             <div class="software-logo">
-                                <img src="images/logos/snap-logo.png" alt="SNAP" />
+                                <img src="images/logos/snap.png" alt="SNAP" />
                             </div>
                             <div class="software-name">SNAP</div>
                             <div class="software-level level-expert">Expert</div>
                         </div>
                         
                         <div class="software-item">
-                            <div class="software-logo">
-                                <img src="images/logos/erdas-logo.png" alt="ERDAS IMAGINE" />
+                            <div class="software-logo wide-logo">
+                                <img src="images/logos/catalyst-logo.png" alt="CATALYST" />
                             </div>
-                            <div class="software-name">ERDAS IMAGINE</div>
+                            <div class="software-name">CATALYST</div>
                             <div class="software-level level-advanced">Advanced</div>
                         </div>
                         
                         <div class="software-item">
-                            <div class="software-logo">
-                                <img src="images/logos/gee-logo.png" alt="Google Earth Engine" />
+                            <div class="software-logo extra-wide-logo">
+                                <img src="images/logos/ee_logo.png" alt="Google Earth Engine" />
                             </div>
                             <div class="software-name">Google Earth Engine</div>
                             <div class="software-level level-advanced">Advanced</div>
@@ -1084,14 +1186,224 @@
                     </div>
                 </div>
 
-                <!-- Programming & Data Science -->
+                <!-- UAV Operations -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-helicopter"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>UAV Operations</h3>
+                            <div class="category-meta">
+                                <span class="experience-badge">5+ Years</span>
+                                <span class="proficiency-badge">Expert Level</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-description">
+                        Professional UAV pilot with 500+ successful missions specializing in high-precision aerial data collection and photogrammetric processing. Certified drone operator with expertise in flight planning, ground control point establishment and optical, multispectral and LiDAR data acquisition. Advanced photogrammetric processing using Structure-from-Motion (SfM) algorithms and dense point cloud generation. Specialized in orthomosaic production, digital surface model creation, and volumetric calculations for mining and geological applications.
+                    </div>
+                    
+                    <div class="software-grid">
+                        <div class="software-item">
+                            <div class="software-logo wide-logo">
+                                <img src="images/logos/metashape-logo.png" alt="Agisoft Metashape" />
+                            </div>
+                            <div class="software-name">Agisoft Metashape</div>
+                            <div class="software-level level-expert">Expert</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/pix4dfields-logo.png" alt="Pix4D Fields" />
+                            </div>
+                            <div class="software-name">Pix4D Fields</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/pix4dmapper-logo.png" alt="Pix4D Mapper" />
+                            </div>
+                            <div class="software-name">Pix4D Mapper</div>
+                            <div class="software-level level-expert">Expert</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo extra-wide-logo">
+                                <img src="images/logos/pix4dsurvey-logo.png" alt="Pix4D Survey" />
+                            </div>
+                            <div class="software-name">Pix4D Survey</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/dji-terra.png" alt="DJI Terra" />
+                            </div>
+                            <div class="software-name">DJI Terra</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo wide-logo">
+                                <img src="images/logos/cloudcompareV2_logo.png" alt="CloudCompare" />
+                            </div>
+                            <div class="software-name">CloudCompare</div>
+                            <div class="software-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo wide-logo">
+                                <img src="images/logos/correlator3d-logo.png" alt="Correlator3D" />
+                            </div>
+                            <div class="software-name">Correlator3D</div>
+                            <div class="software-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/agrowing-logo.png" alt="Agrowing" />
+                            </div>
+                            <div class="software-name">Agrowing</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+
+                        <div class="software-item">
+                            <div class="software-logo extra-wide-logo">
+                                <img src="images/logos/webodm-logo.png" alt="WebODM" />
+                            </div>
+                            <div class="software-name">WebODM</div>
+                            <div class="software-level level-intermediate">Intermediate</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Field Data Acquisition -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>Field Data Acquisition</h3>
+                            <div class="category-meta">
+                                <span class="experience-badge">6+ Years</span>
+                                <span class="proficiency-badge">Expert Level</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-description">
+                        Comprehensive field data management utilizing form-based survey creation through Survey123 and KoBo Toolbox/Mergin Maps platforms. Expert in mobile data collection workflows, high-precision GPS surveying with centimeter level accuracy, and field data validation systems. Proficient in deploying offline-capable data collection solutions and implementing quality control protocols for field teams such as Field Maps and QField.
+                    </div>
+                    
+                    <div class="software-grid">
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/Survey123-logo.png" alt="Survey123" />
+                            </div>
+                            <div class="software-name">Survey123</div>
+                            <div class="software-level level-expert">Expert</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo wide-logo">
+                                <img src="images/logos/kobotoolbox-logo.png" alt="KoBo Toolbox" />
+                            </div>
+                            <div class="software-name">KoBo Toolbox</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/ODK-logo.png" alt="ODK" />
+                            </div>
+                            <div class="software-name">ODK Collect</div>
+                            <div class="software-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo wide-logo">
+                                <img src="images/logos/merginmaps-logo.png" alt="Mergin Maps" />
+                            </div>
+                            <div class="software-name">Mergin Maps</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/arcgis-field-maps-logo.png" alt="ArcGIS Field Maps" />
+                            </div>
+                            <div class="software-name">ArcGIS Field Maps</div>
+                            <div class="software-level level-expert">Expert</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SQL and Databases -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>SQL and Databases</h3>
+                            <div class="category-meta">
+                                <span class="experience-badge">6+ Years</span>
+                                <span class="proficiency-badge">Advanced Level</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-description">
+                        Advanced spatial database design and optimization using PostgreSQL/PostGIS for geospatial data management. Expert in complex spatial queries, indexing strategies, and database performance optimization. Experience in database migration, backup strategies, and multi-user geodatabase administration. Specialized in spatial data integration from heterogeneous sources and ETL process development.
+                    </div>
+                    
+                    <div class="software-grid">
+                        <div class="software-item">
+                            <div class="software-logo wide-logo">
+                                <img src="images/logos/postgis-logo.png" alt="PostGIS" />
+                            </div>
+                            <div class="software-name">PostGIS</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo extra-wide-logo">
+                                <img src="images/logos/postgresql-logo.png" alt="PostgreSQL" />
+                            </div>
+                            <div class="software-name">PostgreSQL</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo extra-wide-logo">
+                                <img src="images/logos/iceberg-logo.png" alt="Apache Iceberg" />
+                            </div>
+                            <div class="software-name">Apache Iceberg</div>
+                            <div class="software-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/Apache_Spark_logo.png" alt="Apache Spark" />
+                            </div>
+                            <div class="software-name">Apache Spark</div>
+                            <div class="software-level level-intermediate">Intermediate</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming and Automation -->
                 <div class="skill-category">
                     <div class="category-header">
                         <div class="category-icon">
                             <i class="fas fa-code"></i>
                         </div>
                         <div class="category-info">
-                            <h3>Programming & Data Science</h3>
+                            <h3>Programming and Automation</h3>
                             <div class="category-meta">
                                 <span class="experience-badge">5+ Years</span>
                                 <span class="proficiency-badge">Advanced Level</span>
@@ -1100,20 +1412,20 @@
                     </div>
                     
                     <div class="category-description">
-                        Geospatial programming, workflow automation, and machine learning applications. Development of custom GIS tools and large-scale data processing pipelines.
+                        Development of automated geospatial workflows using Python (ArcPy, GDAL, Geopandas) and R for statistical analysis and spatial modeling. Creation of custom GIS tools and web services for data processing automation. Implementation of version control systems (Git) and containerized environments (Docker) for reproducible research workflows. Experience in algorithm development for spatial analysis and machine learning model deployment.
                     </div>
                     
                     <div class="software-grid">
                         <div class="software-item">
-                            <div class="software-logo">
-                                <img src="images/logos/python-logo.png" alt="Python" />
+                            <div class="software-logo wide-logo">
+                                <img src="images/logos/python.png" alt="Python" />
                             </div>
                             <div class="software-name">Python</div>
                             <div class="software-level level-advanced">Advanced</div>
                         </div>
                         
                         <div class="software-item">
-                            <div class="software-logo">
+                            <div class="software-logo wide-logo">
                                 <img src="images/logos/r-logo.png" alt="R" />
                             </div>
                             <div class="software-name">R</div>
@@ -1130,63 +1442,103 @@
                         
                         <div class="software-item">
                             <div class="software-logo">
-                                <img src="images/logos/postgresql-logo.png" alt="PostgreSQL" />
+                                <img src="images/logos/Visual_Studio_Code-logo.png" alt="Visual Studio Code" />
                             </div>
-                            <div class="software-name">PostgreSQL</div>
+                            <div class="software-name">Visual Studio Code</div>
                             <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/github-git-logo.png" alt="Git/GitHub" />
+                            </div>
+                            <div class="software-name">Git/GitHub</div>
+                            <div class="software-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/docker-logo.png" alt="Docker" />
+                            </div>
+                            <div class="software-name">Docker</div>
+                            <div class="software-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo wide-logo">
+                                <img src="images/logos/Anaconda_logo.png" alt="Anaconda" />
+                            </div>
+                            <div class="software-name">Anaconda</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/airflow-logo.png" alt="Apache Airflow" />
+                            </div>
+                            <div class="software-name">Apache Airflow</div>
+                            <div class="software-level level-intermediate">Intermediate</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- UAV & Photogrammetry -->
+                <!-- Big Data Analytics - Mineral Prospectivity -->
                 <div class="skill-category">
                     <div class="category-header">
                         <div class="category-icon">
-                            <i class="fas fa-helicopter"></i>
+                            <i class="fas fa-chart-line"></i>
                         </div>
                         <div class="category-info">
-                            <h3>UAV & Photogrammetry</h3>
+                            <h3>Big Data Analytics - Mineral Prospectivity</h3>
                             <div class="category-meta">
-                                <span class="experience-badge">5+ Years</span>
+                                <span class="experience-badge">4+ Years</span>
                                 <span class="proficiency-badge">Advanced Level</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="category-description">
-                        Professional UAV pilot with 500+ successful missions. Specialized in LiDAR data collection, photogrammetry, and ground control point acquisition for high-precision mapping.
+                        Advanced mineral prospectivity mapping using machine learning algorithms and big data frameworks for critical raw materials exploration. Integration of geological, geochemical, geophysical, and remote sensing datasets for large-scale spatial analysis. Started development of predictive models using ensemble methods, neural networks, and fuzzy logic approaches. Specialized in Analytical Hierarchy Process (AHP) implementation, weights-of-evidence modeling, and multi-criteria evaluation for resource assessment.
                     </div>
                     
                     <div class="software-grid">
                         <div class="software-item">
                             <div class="software-logo">
-                                <img src="images/logos/agisoft-logo.png" alt="Agisoft Metashape" />
+                                <img src="images/logos/Apache_Spark_logo.png" alt="Apache Spark" />
                             </div>
-                            <div class="software-name">Agisoft Metashape</div>
+                            <div class="software-name">Apache Spark</div>
+                            <div class="software-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo extra-wide-logo">
+                                <img src="images/logos/tf_logo.png" alt="TensorFlow" />
+                            </div>
+                            <div class="software-name">TensorFlow</div>
+                            <div class="software-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/scikit_learn-logo.png" alt="scikit-learn" />
+                            </div>
+                            <div class="software-name">scikit-learn</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo wide-logo">
+                                <img src="images/logos/lneg-logo.png" alt="LNEG Methods" />
+                            </div>
+                            <div class="software-name">LNEG Methods</div>
                             <div class="software-level level-expert">Expert</div>
                         </div>
                         
                         <div class="software-item">
                             <div class="software-logo">
-                                <img src="images/logos/pix4d-logo.png" alt="PIX4D" />
+                                <img src="images/logos/simactive_logo.png" alt="SimActive" />
                             </div>
-                            <div class="software-name">PIX4D</div>
-                            <div class="software-level level-advanced">Advanced</div>
-                        </div>
-                        
-                        <div class="software-item">
-                            <div class="software-logo">
-                                <img src="images/logos/dji-logo.png" alt="DJI Terra" />
-                            </div>
-                            <div class="software-name">DJI Terra</div>
-                            <div class="software-level level-advanced">Advanced</div>
-                        </div>
-                        
-                        <div class="software-item">
-                            <div class="software-logo">
-                                <img src="images/logos/cloudcompare-logo.png" alt="CloudCompare" />
-                            </div>
-                            <div class="software-name">CloudCompare</div>
+                            <div class="software-name">SimActive</div>
                             <div class="software-level level-intermediate">Intermediate</div>
                         </div>
                     </div>
@@ -1270,292 +1622,7 @@
             </div>
         </section>
 
-        <!-- Software Expertise Section -->
-        <section class="section">
-            <h2>Software Expertise</h2>
-            
-            <div class="software-categories">
-                <div class="software-category">
-                    <h3><i class="fas fa-globe"></i> GIS & Spatial Analysis</h3>
-                    <div class="software-grid">
-                        <div class="software-item expert">
-                            <div class="software-icon">
-                                <i class="fas fa-layer-group"></i>
-                            </div>
-                            <div class="software-info">
-                                <h4>ArcGIS Pro / ArcMap</h4>
-                                <span class="proficiency expert">Expert</span>
-                                <p>Advanced spatial analysis, 3D modeling, geoprocessing</p>
-                            </div>
-                        </div>
-                        
-                        <div class="software-item expert">
-                            <div class="software-icon">
-                                <i class="fas fa-map"></i>
-                            </div>
-                            <div class="software-info">
-                                <h4>QGIS</h4>
-                                <span class="proficiency expert">Expert</span>
-                                <p>Open-source GIS, plugin development, custom workflows</p>
-                            </div>
-                        </div>
-                        
-                        <div class="software-item advanced">
-                            <div class="software-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div class="software-info">
-                                <h4>PostGIS / PostgreSQL</h4>
-                                <span class="proficiency advanced">Advanced</span>
-                                <p>Spatial databases, complex queries, optimization</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="software-category">
-                    <h3><i class="fas fa-satellite-dish"></i> Remote Sensing & Image Processing</h3>
-                    <div class="software-grid">
-                        <div class="software-item expert">
-                            <div class="software-icon">
-                                <i class="fas fa-satellite"></i>
-                            </div>
-                            <div class="software-info">
-                                <h4>ENVI / ERDAS IMAGINE</h4>
-                                <span class="proficiency expert">Expert</span>
-                                <p>Hyperspectral analysis, atmospheric correction, classification</p>
-                            </div>
-                        </div>
-                        
-                        <div class="software-item expert">
-                            <div class="software-icon">
-                                <i class="fas fa-satellite"></i>
-                            </div>
-                            <div class="software-info">
-                                <h4>SNAP (Sentinel Application)</h4>
-                                <span class="proficiency expert">Expert</span>
-                                <p>Sentinel data processing, radar interferometry</p>
-                            </div>
-                        </div>
-                        
-                        <div class="software-item advanced">
-                            <div class="software-icon">
-                                <i class="fas fa-helicopter"></i>
-                            </div>
-                            <div class="software-info">
-                                <h4>Agisoft Metashape</h4>
-                                <span class="proficiency advanced">Advanced</span>
-                                <p>Photogrammetry, 3D reconstruction, UAV data processing</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="software-category">
-                    <h3><i class="fas fa-code"></i> Programming & Development</h3>
-                    <div class="software-grid">
-                        <div class="software-item advanced">
-                            <div class="software-icon">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <div class="software-info">
-                                <h4>Python</h4>
-                                <span class="proficiency advanced">Advanced</span>
-                                <p>ArcPy, GDAL, Pandas, Scikit-learn, automation scripts</p>
-                            </div>
-                        </div>
-                        
-                        <div class="software-item intermediate">
-                            <div class="software-icon">
-                                <i class="fab fa-r-project"></i>
-                            </div>
-                            <div class="software-info">
-                                <h4>R</h4>
-                                <span class="proficiency intermediate">Intermediate</span>
-                                <p>Statistical analysis, spatial packages, data visualization</p>
-                            </div>
-                        </div>
-                        
-                        <div class="software-item advanced">
-                            <div class="software-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div class="software-info">
-                                <h4>SQL</h4>
-                                <span class="proficiency advanced">Advanced</span>
-                                <p>Spatial queries, database optimization, complex joins</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="software-category">
-                    <h3><i class="fas fa-cube"></i> Specialized Geological Software</h3>
-                    <div class="software-grid">
-                        <div class="software-item expert">
-                            <div class="software-icon">
-                                <i class="fas fa-mountain"></i>
-                            </div>
-                            <div class="software-info">
-                                <h4>Leapfrog Geo</h4>
-                                <span class="proficiency expert">Expert</span>
-                                <p>3D geological modeling, implicit modeling, uncertainty analysis</p>
-                            </div>
-                        </div>
-                        
-                        <div class="software-item advanced">
-                            <div class="software-icon">
-                                <i class="fas fa-water"></i>
-                            </div>
-                            <div class="software-info">
-                                <h4>HEC-RAS / IBER</h4>
-                                <span class="proficiency advanced">Advanced</span>
-                                <p>Hydraulic modeling, flood simulation, dam break analysis</p>
-                            </div>
-                        </div>
-                        
-                        <div class="software-item intermediate">
-                            <div class="software-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="software-info">
-                                <h4>Surfer / Golden Software</h4>
-                                <span class="proficiency intermediate">Intermediate</span>
-                                <p>Grid-based modeling, contouring, 3D surface mapping</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Skills Section -->
-        <section class="section">
-            <h2>Core Skills</h2>
-            
-            <div class="skills-grid-new">
-                <div class="skill-card gis">
-                    <div class="skill-symbol">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <div class="skill-level-badge expert">Expert</div>
-                    <div class="skill-overlay">
-                        <i class="fas fa-globe"></i>
-                        <h4>GIS Analysis</h4>
-                        <p>Advanced spatial analysis, geodatabase management and complex analytical workflows using ArcGIS Pro and QGIS</p>
-                    </div>
-                </div>
                 
-                <div class="skill-card remote-sensing">
-                    <div class="skill-symbol">
-                        <i class="fas fa-satellite"></i>
-                    </div>
-                    <div class="skill-level-badge expert">Expert</div>
-                    <div class="skill-overlay">
-                        <i class="fas fa-satellite-dish"></i>
-                        <h4>Remote Sensing</h4>
-                        <p>SAR and Multispectal satellite imagery processing</p>
-                    </div>
-                </div>
-                
-                <div class="skill-card drone">
-                    <div class="skill-symbol">
-                        <i class="fas fa-drone"></i>
-                    </div>
-                    <div class="skill-level-badge advanced">Advanced</div>
-                    <div class="skill-overlay">
-                        <i class="fas fa-helicopter"></i>
-                        <h4>Drone Operations</h4>
-                        <p>Professional UAV pilot with hundreds of missions, specializing in LiDAR data collection, photogrammetry and ground control point acquisition</p>
-                    </div>
-                </div>
-                                
-                <div class="skill-card flood">
-                    <div class="skill-symbol">
-                        <i class="fas fa-tint"></i>
-                    </div>
-                    <div class="skill-level-badge expert">Expert</div>
-                    <div class="skill-overlay">
-                        <i class="fas fa-water"></i>
-                        <h4>Flood Risk Assessment</h4>
-                        <p>Hydraulic modeling and flood plain mapping</p>
-                    </div>
-                </div>
-                
-                <div class="skill-card sql">
-                    <div class="skill-symbol">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <div class="skill-level-badge advanced">Advanced</div>
-                    <div class="skill-overlay">
-                        <i class="fas fa-database"></i>
-                        <h4>SQL & Databases</h4>
-                        <p>Spatial database design, Pstgres/PostGIS, geodatabase optimization, and complex geospatial query development</p>
-                    </div>
-                </div>
-                
-                <div class="skill-card data-analytics">
-                    <div class="skill-symbol">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <div class="skill-level-badge advanced">Advanced</div>
-                    <div class="skill-overlay">
-                        <i class="fas fa-chart-line"></i>
-                        <h4>Big Data Analytics</h4>
-                        <p>Processing large geospatial datasets, Python scripting, and machine learning/deep learning applications in geosciences</p>
-                    </div>
-                </div>
-                
-                <div class="skill-card cartography">
-                    <div class="skill-symbol">
-                        <i class="fas fa-compass"></i>
-                    </div>
-                    <div class="skill-level-badge expert">Expert</div>
-                    <div class="skill-overlay">
-                        <i class="fas fa-map"></i>
-                        <h4>Cartographic Design</h4>
-                        <p>Professional map creation, data visualization, and effective communication of spatial information</p>
-                    </div>
-                </div>
-                
-                <div class="skill-card minerals">
-                    <div class="skill-symbol">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <div class="skill-level-badge advanced">Advanced</div>
-                    <div class="skill-overlay">
-                        <i class="fas fa-gem"></i>
-                        <h4>Critical Raw Materials</h4>
-                        <p>Mineral prospectivity mapping.</p>
-                    </div>
-                </div>
-                
-                <div class="skill-card field-data">
-                    <div class="skill-symbol">
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
-                    <div class="skill-level-badge expert">Expert</div>
-                    <div class="skill-overlay">
-                        <i class="fas fa-clipboard-list"></i>
-                        <h4>Field Data Acquisition</h4>
-                        <p>Form-based survey creation, mobile data collection, GPS surveying, and field data validation systems</p>
-                    </div>
-                </div>
-                
-                <div class="skill-card programming">
-                    <div class="skill-symbol">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="skill-level-badge advanced">Advanced</div>
-                    <div class="skill-overlay">
-                        <i class="fas fa-code"></i>
-                        <h4>Programming & Automation</h4>
-                        <p>Python, R, automated workflows, geoprocessing scripts, and custom GIS tool development</p>
-                    </div>
-                </div>
-                             
-            </div>
-        </section>
-
         <!-- Key Projects Section -->
         <section class="section">
             <h2>Current Research Projects</h2>
