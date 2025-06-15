@@ -131,7 +131,197 @@
             border-bottom: 2px solid #3498db;
             padding-bottom: 10px;
         }
+        
+        /* Languages Section Enhancement */
+        .languages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
 
+        .language-item {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #3498db;
+            transition: all 0.3s ease;
+        }
+
+        .language-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
+        }
+
+        .language-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .flag-icon {
+            font-size: 2em;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .language-header h4 {
+            color: #2c3e50;
+            margin: 0;
+            flex: 1;
+            font-size: 1.3em;
+        }
+
+        .level-badge {
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .level-badge.native {
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+            color: white;
+        }
+
+        .level-badge.intermediate {
+            background: linear-gradient(45deg, #f39c12, #e67e22);
+            color: white;
+        }
+
+        .language-skills {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .skill-row {
+            display: grid;
+            grid-template-columns: 80px 1fr 40px;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .skill-label {
+            font-size: 0.9em;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            border-radius: 10px;
+            transition: width 2s ease-in-out;
+        }
+
+        .skill-level {
+            font-size: 0.8em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        @media (max-width: 768px) {
+            .languages {
+                grid-template-columns: 1fr;
+            }
+            
+            .skill-row {
+                grid-template-columns: 70px 1fr 35px;
+                gap: 10px;
+            }
+        }
+        /* Education Section with Logos */
+        .education-item {
+            margin-bottom: 25px;
+            padding: 25px;
+            border-left: 4px solid #3498db;
+            background: #f8f9fa;
+            border-radius: 0 10px 10px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .education-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1);
+        }
+
+        .education-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .education-content h3 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+
+        .education-logo {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .education-logo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+            border-color: #3498db;
+        }
+
+        .education-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        /* Fallback for missing logos */
+        .education-logo:empty::before {
+            content: "🎓";
+            font-size: 2em;
+            color: #bdc3c7;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .education-item {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .education-logo {
+                align-self: center;
+                width: 60px;
+                height: 60px;
+            }
+        }
         .skills-grid-new {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -765,7 +955,7 @@
                     <p>Monitor for Master's program in Geographic Information Systems and Territorial Planning. Assisted students with GIS analysis, spatial modeling, and research methodologies.</p>
                 </div>
                 <div class="company-logo">
-                    <img src="images/logos/uporto-logo.png" alt="University of Porto Logo">
+                    <img src="images/logos/flup.png" alt="Faculty of Arts, University of Porto Logo">
                 </div>
             </div>
 
@@ -782,7 +972,7 @@
                     <p>Technical support for GIS laboratories and research projects. Provided expertise in spatial analysis, data management, and cartographic production.</p>
                 </div>
                 <div class="company-logo">
-                    <img src="images/logos/uporto-logo.png" alt="University of Porto Logo">
+                    <img src="images/logos/flup.png" alt="Faculty of Arts, University of Porto Logo">
                 </div>
             </div>
         </section>
@@ -1416,39 +1606,52 @@
             <h2>Education</h2>
             
             <div class="education-item">
-                <h3>PhD in Geographic Engineering</h3>
-                <div class="meta-info">
-                    <i class="fas fa-university"></i> Faculty of Sciences of Porto University, Portugal
-                    <br>
-                    <i class="fas fa-calendar"></i> 2025 - 2028 (estimated)
-                    <br>
-                    
+                <div class="education-content">
+                    <h3>PhD in Geographic Engineering</h3>
+                    <div class="meta-info">
+                        <i class="fas fa-university"></i> Faculty of Sciences of Porto University, Portugal
+                        <br>
+                        <i class="fas fa-calendar"></i> 2025 - 2028 (estimated)
+                    </div>
+                    <p><strong>Thesis:</strong> "The applicability of remote sensing and machine learning algorithms for identifying critical and strategic mineral resources" - provisional title</p>
                 </div>
-                <p><strong>Thesis:</strong> "The applicability of remote sensing and machine learning algorithms for identifying critical and strategic mineral resources" - provisional title</p>
+                <div class="education-logo">
+                    <img src="images/logos/fcup.png" alt="Faculty of Sciences University of Porto">
+                </div>
             </div>
 
             <div class="education-item">
-                <h3>Master's Degree in Geographic Information Systems and Territorial Planning</h3>
-                <div class="meta-info">
-                    <i class="fas fa-university"></i> Faculty of Arts of Porto University, Portugal
-                    <br>
-                    <i class="fas fa-calendar"></i> 2010 - 2012
-                    <br>
-                    <i class="fas fa-star"></i> Grade: 17/20
+                <div class="education-content">
+                    <h3>Master's Degree in Geographic Information Systems and Spatial Planning</h3>
+                    <div class="meta-info">
+                        <i class="fas fa-university"></i> Faculty of Arts of Porto University, Portugal
+                        <br>
+                        <i class="fas fa-calendar"></i> 2010 - 2012
+                        <br>
+                        <i class="fas fa-star"></i> Grade: 17/20
+                    </div>
+                    <p><strong>Thesis:</strong> "Flood prone areas assessment in Leça River - hydraulic modeling for two areas of Matosinhos municipality"</p>
                 </div>
-                <p><strong>Thesis:</strong> "Flood prone areas assessment in Leça River - hydraulic modeling for two areas of Matosinhos municipality"</p>
+                <div class="education-logo">
+                    <img src="images/logos/flup.png" alt="Faculty of Arts University of Porto">
+                </div>
             </div>
 
             <div class="education-item">
-                <h3>Bachelor's Degree in Geography</h3>
-                <div class="meta-info">
-                    <i class="fas fa-university"></i> Faculty of Arts of Porto University, Portugal
-                    <br>
-                    <i class="fas fa-calendar"></i>  2010
-                    <br>
-                    <i class="fas fa-star"></i> Grade: 13/20
+                <div class="education-content">
+                    <h3>Bachelor's Degree in Geography</h3>
+                    <div class="meta-info">
+                        <i class="fas fa-university"></i> Faculty of Arts of Porto University, Portugal
+                        <br>
+                        <i class="fas fa-calendar"></i> 2005 - 2010
+                        <br>
+                        <i class="fas fa-star"></i> Grade: 13/20
+                    </div>
+                    <p><strong>Thesis:</strong> "Flood risk assessment and civil protection"</p>
                 </div>
-                <p><strong>Thesis:</strong> "Flood risk rssessment and civil protection"</p>
+                <div class="education-logo">
+                    <img src="images/logos/flup.png" alt="Faculty of Arts University of Porto">
+                </div>
             </div>
         </section>
 
@@ -1457,16 +1660,96 @@
             <h2>Languages</h2>
             <div class="languages">
                 <div class="language-item">
-                    <h4>Portuguese</h4>
-                    <p>Native - Proficient User (C1)</p>
+                    <div class="language-header">
+                        <div class="flag-icon">🇵🇹</div>
+                        <h4>Portuguese</h4>
+                        <span class="level-badge native">Native</span>
+                    </div>
+                    <div class="language-skills">
+                        <div class="skill-row">
+                            <span class="skill-label">Speaking</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="skill-level">C2</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-label">Reading</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="skill-level">C2</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-label">Writing</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="skill-level">C2</span>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="language-item">
-                    <h4>Spanish</h4>
-                    <p>Independent User (B1) - Reading<br>Elementary User (A1) - Speaking/Writing</p>
+                    <div class="language-header">
+                        <div class="flag-icon">🇪🇸</div>
+                        <h4>Spanish</h4>
+                        <span class="level-badge intermediate">Intermediate</span>
+                    </div>
+                    <div class="language-skills">
+                        <div class="skill-row">
+                            <span class="skill-label">Speaking</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 20%"></div>
+                            </div>
+                            <span class="skill-level">A1</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-label">Reading</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 60%"></div>
+                            </div>
+                            <span class="skill-level">B1</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-label">Writing</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 20%"></div>
+                            </div>
+                            <span class="skill-level">A1</span>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="language-item">
-                    <h4>French</h4>
-                    <p>Independent User (B1) - Reading<br>Elementary User (A1) - Speaking/Writing</p>
+                    <div class="language-header">
+                        <div class="flag-icon">🇫🇷</div>
+                        <h4>French</h4>
+                        <span class="level-badge intermediate">Intermediate</span>
+                    </div>
+                    <div class="language-skills">
+                        <div class="skill-row">
+                            <span class="skill-label">Speaking</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 20%"></div>
+                            </div>
+                            <span class="skill-level">A1</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-label">Reading</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 60%"></div>
+                            </div>
+                            <span class="skill-level">B1</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-label">Writing</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 20%"></div>
+                            </div>
+                            <span class="skill-level">A1</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
