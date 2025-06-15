@@ -26,7 +26,7 @@
         }
 
         .header {
-            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(52, 152, 219, 0.85)), url('images/Namibia_PCA214.jpg');
+            background: linear-gradient(rgba(44, 62, 80, 0.2), rgba(52, 152, 219, 0.2)), url('images/Namibia_PCA214.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -117,183 +117,6 @@
             gap: 25px;
         }
 
-        .skill-card {
-            height: 200px;
-            border-radius: 15px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        /* Background images for each skill */
-        .skill-card.gis {
-            background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 152, 219, 0.7)), url('images/gis-background.jpg');
-        }
-        
-        .skill-card.remote-sensing {
-            background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 152, 219, 0.7)), url('images/remote-sensing-background.jpg');
-        }
-        
-        .skill-card.drone {
-            background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 152, 219, 0.7)), url('images/drone-background.jpg');
-        }
-        
-        .skill-card.geology {
-            background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 152, 219, 0.7)), url('images/geology-background.jpg');
-        }
-        
-        .skill-card.flood {
-            background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 152, 219, 0.7)), url('images/flood-background.jpg');
-        }
-        
-        .skill-card.data-analytics {
-            background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 152, 219, 0.7)), url('images/data-analytics-background.jpg');
-        }
-        
-        .skill-card.cartography {
-            background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 152, 219, 0.7)), url('images/cartography-background.jpg');
-        }
-        
-        .skill-card.sql {
-            background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 152, 219, 0.7)), url('images/sql-background.jpg');
-        }
-        
-        .skill-card.field-data {
-            background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 152, 219, 0.7)), url('images/field-data-background.jpg');
-        }
-        
-        .skill-card.programming {
-            background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 152, 219, 0.7)), url('images/programming-background.jpg');
-        }
-        
-        .skill-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(52, 152, 219, 0.3);
-        }
-
-        .skill-card:hover .skill-overlay {
-            background: linear-gradient(135deg, rgba(44, 62, 80, 0.8), rgba(52, 152, 219, 0.8));
-        }
-
-        .skill-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(44, 62, 80, 0.85), rgba(52, 152, 219, 0.85));
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .skill-card i {
-            font-size: 2.5em;
-            color: white;
-            margin-bottom: 15px;
-            transition: all 0.3s ease;
-        }
-
-        .skill-card:hover i {
-            transform: scale(1.1);
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-        }
-
-        .skill-card h4 {
-            color: white;
-            margin-bottom: 10px;
-            font-size: 1.2em;
-            font-weight: 600;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .skill-card p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.9em;
-            line-height: 1.4;
-            margin: 0;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        .skill-level-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            color: white;
-            padding: 8px 14px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-            border: 2px solid rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(5px);
-        }
-
-        .expert { 
-            background: linear-gradient(45deg, #27ae60, #2ecc71);
-            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.6);
-        }
-        .advanced { 
-            background: linear-gradient(45deg, #3498db, #2980b9);
-            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.6);
-        }
-
-        .skill-symbol {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.15);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(10px);
-        }
-
-        .skill-symbol i {
-            font-size: 1.2em !important;
-            color: white !important;
-            margin: 0 !important;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        @media (max-width: 768px) {
-            .skills-grid-new {
-                grid-template-columns: 1fr;
-            }
-            
-            .skill-card {
-                height: 180px;
-            }
-        }
-
-        .skill-tag {
-            background: linear-gradient(45deg, #3498db, #2980b9);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            text-align: center;
-            font-size: 0.9em;
-            transition: transform 0.3s;
-        }
-
-        .skill-tag:hover {
-            transform: translateY(-2px);
-        }
-
         .experience-item, .education-item, .project-item {
             margin-bottom: 25px;
             padding: 20px;
@@ -331,7 +154,207 @@
         .download-btn:hover {
             transform: translateY(-2px);
         }
+        
+        .skills-categories {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
 
+        .skill-category {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 20px;
+            padding: 35px;
+            border-left: 6px solid #3498db;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(52, 152, 219, 0.15);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .category-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, #3498db, #2c3e50);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 25px;
+            color: white;
+            font-size: 2em;
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+        }
+
+        .category-info h3 {
+            color: #2c3e50;
+            margin: 0 0 8px 0;
+            font-size: 1.6em;
+            font-weight: 700;
+        }
+
+        .category-meta {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .experience-badge {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .proficiency-badge {
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .software-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+        }
+
+        .software-item {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid #e9ecef;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .software-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .software-item:hover::before {
+            left: 100%;
+        }
+
+        .software-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(52, 152, 219, 0.2);
+            border-color: #3498db;
+        }
+
+        .software-logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 15px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .software-logo img {
+            max-width: 45px;
+            max-height: 45px;
+            object-fit: contain;
+            filter: grayscale(20%);
+            transition: all 0.3s ease;
+        }
+
+        .software-item:hover .software-logo img {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        .software-name {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+            position: relative;
+            z-index: 2;
+        }
+
+        .software-level {
+            font-size: 0.8em;
+            color: #666;
+            position: relative;
+            z-index: 2;
+        }
+
+        .level-expert {
+            color: #27ae60;
+            font-weight: 600;
+        }
+
+        .level-advanced {
+            color: #3498db;
+            font-weight: 600;
+        }
+
+        .level-intermediate {
+            color: #f39c12;
+            font-weight: 600;
+        }
+
+        .software-logo.no-logo {
+            background: linear-gradient(45deg, #3498db, #2c3e50);
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .category-description {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(52, 152, 219, 0.05);
+            border-radius: 12px;
+            border-left: 4px solid #3498db;
+        }
+
+        @media (max-width: 768px) {
+            .software-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 15px;
+            }
+            
+            .category-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .category-meta {
+                justify-content: center;
+            }
+        }
         .current-position {
             background: linear-gradient(45deg, #e74c3c, #c0392b);
             color: white;
@@ -427,113 +450,7 @@
         .orcid-link:hover {
             color: #2ecc71;
         }
-        .software-categories {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .software-category {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 4px solid #3498db;
-        }
-
-        .software-category h3 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.2em;
-        }
-
-        .software-category h3 i {
-            color: #3498db;
-        }
-
-        .software-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .software-item {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            transition: all 0.3s ease;
-            border: 1px solid #dee2e6;
-        }
-
-        .software-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1);
-        }
-
-        .software-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(45deg, #3498db, #2980b9);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5em;
-            flex-shrink: 0;
-        }
-
-        .software-info h4 {
-            color: #2c3e50;
-            margin: 0 0 8px 0;
-            font-size: 1em;
-        }
-
-        .software-info p {
-            color: #666;
-            font-size: 0.85em;
-            margin: 5px 0 0 0;
-            line-height: 1.4;
-        }
-
-        .proficiency {
-            padding: 3px 8px;
-            border-radius: 10px;
-            font-size: 0.75em;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .proficiency.expert {
-            background: linear-gradient(45deg, #27ae60, #2ecc71);
-            color: white;
-        }
-
-        .proficiency.advanced {
-            background: linear-gradient(45deg, #3498db, #2980b9);
-            color: white;
-        }
-
-        .proficiency.intermediate {
-            background: linear-gradient(45deg, #f39c12, #e67e22);
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .software-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .software-item {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
+        
         .experience-item {
             margin-bottom: 25px;
             padding: 25px;
@@ -843,6 +760,229 @@
                 </div>
                 <div class="company-logo">
                     <img src="images/logos/uporto-logo.png" alt="University of Porto Logo">
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Technology Section -->
+        <section class="section">
+            <h2>Skills & Technology</h2>
+            
+            <div class="skills-categories">
+                <!-- GIS & Spatial Analysis -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>GIS & Spatial Analysis</h3>
+                            <div class="category-meta">
+                                <span class="experience-badge">8+ Years</span>
+                                <span class="proficiency-badge">Expert Level</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-description">
+                        Advanced spatial modeling, geodatabase management, and complex analytical workflows. Leading enterprise GIS implementations and spatial data architecture design.
+                    </div>
+                    
+                    <div class="software-grid">
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/arcgis-logo.png" alt="ArcGIS Pro" />
+                            </div>
+                            <div class="software-name">ArcGIS Pro</div>
+                            <div class="software-level level-expert">Expert</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/qgis-logo.png" alt="QGIS" />
+                            </div>
+                            <div class="software-name">QGIS</div>
+                            <div class="software-level level-expert">Expert</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/postgis-logo.png" alt="PostGIS" />
+                            </div>
+                            <div class="software-name">PostGIS</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/fme-logo.png" alt="FME" />
+                            </div>
+                            <div class="software-name">FME</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Remote Sensing -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-satellite-dish"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>Remote Sensing & Image Processing</h3>
+                            <div class="category-meta">
+                                <span class="experience-badge">6+ Years</span>
+                                <span class="proficiency-badge">Expert Level</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-description">
+                        Satellite imagery processing, hyperspectral analysis, and change detection. Integration of Sentinel, Landsat, and commercial satellite data for geological and environmental monitoring.
+                    </div>
+                    
+                    <div class="software-grid">
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/envi-logo.png" alt="ENVI" />
+                            </div>
+                            <div class="software-name">ENVI</div>
+                            <div class="software-level level-expert">Expert</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/snap-logo.png" alt="SNAP" />
+                            </div>
+                            <div class="software-name">SNAP</div>
+                            <div class="software-level level-expert">Expert</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/erdas-logo.png" alt="ERDAS IMAGINE" />
+                            </div>
+                            <div class="software-name">ERDAS IMAGINE</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/gee-logo.png" alt="Google Earth Engine" />
+                            </div>
+                            <div class="software-name">Google Earth Engine</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming & Data Science -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>Programming & Data Science</h3>
+                            <div class="category-meta">
+                                <span class="experience-badge">5+ Years</span>
+                                <span class="proficiency-badge">Advanced Level</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-description">
+                        Geospatial programming, workflow automation, and machine learning applications. Development of custom GIS tools and large-scale data processing pipelines.
+                    </div>
+                    
+                    <div class="software-grid">
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/python-logo.png" alt="Python" />
+                            </div>
+                            <div class="software-name">Python</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/r-logo.png" alt="R" />
+                            </div>
+                            <div class="software-name">R</div>
+                            <div class="software-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/jupyter-logo.png" alt="Jupyter" />
+                            </div>
+                            <div class="software-name">Jupyter Notebook</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/postgresql-logo.png" alt="PostgreSQL" />
+                            </div>
+                            <div class="software-name">PostgreSQL</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UAV & Photogrammetry -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-helicopter"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>UAV & Photogrammetry</h3>
+                            <div class="category-meta">
+                                <span class="experience-badge">5+ Years</span>
+                                <span class="proficiency-badge">Advanced Level</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-description">
+                        Professional UAV pilot with 500+ successful missions. Specialized in LiDAR data collection, photogrammetry, and ground control point acquisition for high-precision mapping.
+                    </div>
+                    
+                    <div class="software-grid">
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/agisoft-logo.png" alt="Agisoft Metashape" />
+                            </div>
+                            <div class="software-name">Agisoft Metashape</div>
+                            <div class="software-level level-expert">Expert</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/pix4d-logo.png" alt="PIX4D" />
+                            </div>
+                            <div class="software-name">PIX4D</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/dji-logo.png" alt="DJI Terra" />
+                            </div>
+                            <div class="software-name">DJI Terra</div>
+                            <div class="software-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="software-item">
+                            <div class="software-logo">
+                                <img src="images/logos/cloudcompare-logo.png" alt="CloudCompare" />
+                            </div>
+                            <div class="software-name">CloudCompare</div>
+                            <div class="software-level level-intermediate">Intermediate</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
