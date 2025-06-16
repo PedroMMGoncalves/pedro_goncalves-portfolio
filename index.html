@@ -132,6 +132,73 @@
             padding-bottom: 10px;
         }
 
+        /* PROJECT LOGOS */
+        .project-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .project-main-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .project-logo {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .project-logo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+            border-color: #3498db;
+        }
+
+        .project-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .project-logo.no-logo {
+            background: linear-gradient(45deg, #3498db, #2c3e50);
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .project-title-section {
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .project-main-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .project-logo {
+                align-self: center;
+                width: 50px;
+                height: 50px;
+            }
+        }
         /* Languages Section Enhancement */
         .languages {
             display: grid;
@@ -1763,8 +1830,14 @@
                     <!-- GENESIS -->
                     <div class="project-item enhanced">
                         <div class="project-header">
-                            <div class="project-title-section">
-                                <h3>GENESIS <span class="project-status status-ongoing">Ongoing</span></h3>
+                            <div class="project-main-content">
+                                <div class="project-logo">
+                                <img src="images/logos/genesis-logo.png" alt="GENESIS Logo">
+                            </div>
+                                </div>
+                                <div class="project-title-section">
+                                    <h3>GENESIS <span class="project-status status-ongoing">Ongoing</span></h3>
+                                </div>
                             </div>
                             <div class="project-badges">
                                 <a href="https://genesisnbs.eu/" class="project-website" target="_blank">
@@ -1782,26 +1855,31 @@
                                     <i class="fas fa-user-tie"></i> Remote Sensing Expert & GIS Specialist
                                 </div>
                                 <div class="meta-info">
-                                    <i class="fas fa-euro-sign"></i> €2.5M EU Project
+                                    <i class="fas fa-building"></i> European Union’s Horizon 2023 green researchand innovation programme under grant agreement Nº 101157447.
                                 </div>
                             </div>
                         </div>
                         
                         <div class="project-description-enhanced">
                             <p><strong>Geologically Enhanced Nature-based Solutions for climate change resiliency of critical water Infrastructure.</strong></p>
-                            <p>Leading all remote sensing analysis, developing GIS databases, conducting drone surveys for geological mapping to support nature-based solution implementation and monitoring.</p>
+                            <p>Remote sensing analysis and developing custom tools for mosaic creation and geologic indexes, developing GIS databases and integrating diverse GIS datasets.</p>
                         </div>
                     </div>
 
                     <!-- MOZAMBIQUE -->
                     <div class="project-item enhanced">
                         <div class="project-header">
-                            <div class="project-title-section">
-                                <h3>Mozambique Hydrogeological Mapping <span class="project-status status-ongoing">Ongoing</span></h3>
+                            <div class="project-main-content">
+                                <div class="project-logo">
+                                    <img src="images/logos/worldbank-logo.png" alt="World Bank Logo">
+                                </div>
+                                <div class="project-title-section">
+                                    <h3>Mozambique Hydrogeological Mapping <span class="project-status status-ongoing">Ongoing</span></h3>
+                                </div>
                             </div>
                             <div class="project-badges">
                                 <a href="https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00292408" class="project-website" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i> World Bank
+                                    <i class="fas fa-external-link-alt"></i> Website
                                 </a>
                             </div>
                         </div>
@@ -1822,15 +1900,20 @@
                         
                         <div class="project-description-enhanced">
                             <p><strong>Consulting Services for Updating and Upgrading the Hydrogeological Map of Mozambique.</strong></p>
-                            <p>Development of custom remote sensing tools to create country-wide mosaics using best pixel strategy. Development of custom indices to identify water bodies and soil moisture. Delivered tailored training sessions focusing on remote sensing and field data acquisition.</p>
+                            <p>Developed custom remote sensing tools to generate country-wide mosaics utilizing a best-pixel composite strategy. Created a specialized index for accurate water body and soil moisture identification to optimize field operation management. Additionally, will be designed and delivered tailored training session on remote sensing techniques and field data acquisition.</p>
                         </div>
                     </div>
 
                     <!-- XTRACT -->
                     <div class="project-item enhanced">
                         <div class="project-header">
-                            <div class="project-title-section">
-                                <h3>Xtract - Zero Emission Mining <span class="project-status status-ongoing">Ongoing</span></h3>
+                            <div class="project-main-content">
+                                <div class="project-logo">
+                                    <img src="images/logos/xtract-logo.png" alt="Xtract Logo">
+                                </div>
+                                <div class="project-title-section">
+                                    <h3>Xtract <span class="project-status status-ongoing">Ongoing</span></h3>
+                                </div>
                             </div>
                             <div class="project-badges">
                                 <a href="https://xtract-project.eu/" class="project-website" target="_blank">
@@ -1862,8 +1945,13 @@
                     <!-- SOIL@INT -->
                     <div class="project-item enhanced">
                         <div class="project-header">
-                            <div class="project-title-section">
-                                <h3>Soil@Int <span class="project-status status-ongoing">Ongoing</span></h3>
+                            <div class="project-main-content">
+                                <div class="project-logo">
+                                    <img src="images/logos/cesam-logo.png" alt="CESAM Logo">
+                                </div>
+                                <div class="project-title-section">
+                                    <h3>Soil@Int <span class="project-status status-ongoing">Ongoing</span></h3>
+                                </div>
                             </div>
                             <div class="project-badges">
                                 <a href="https://www.cesam-la.pt/en/projects/soils-monitoring-to-mitigate-the-effect-of-climate-change-soilint/" class="project-website" target="_blank">
@@ -1895,8 +1983,13 @@
                     <!-- GSEU -->
                     <div class="project-item enhanced">
                         <div class="project-header">
-                            <div class="project-title-section">
-                                <h3>GSEU - A Geological Service for Europe <span class="project-status status-ongoing">Ongoing</span></h3>
+                            <div class="project-main-content">
+                                <div class="project-logo">
+                                    <img src="images/logos/gseu-logo.png" alt="GSEU Logo">
+                                </div>
+                                <div class="project-title-section">
+                                    <h3>GSEU - A Geological Service for Europe <span class="project-status status-ongoing">Ongoing</span></h3>
+                                </div>
                             </div>
                             <div class="project-badges">
                                 <a href="https://www.geologicalservice.eu/" class="project-website" target="_blank">
@@ -1928,8 +2021,13 @@
                     <!-- AFRICAMAVAL -->
                     <div class="project-item enhanced">
                         <div class="project-header">
-                            <div class="project-title-section">
-                                <h3>AfricaMaVal <span class="project-status status-ongoing">Ongoing</span></h3>
+                            <div class="project-main-content">
+                                <div class="project-logo">
+                                    <img src="images/logos/brgm-logo.png" alt="BRGM Logo">
+                                </div>
+                                <div class="project-title-section">
+                                    <h3>AfricaMaVal <span class="project-status status-ongoing">Ongoing</span></h3>
+                                </div>
                             </div>
                             <div class="project-badges">
                                 <span class="project-website" style="background: #95a5a6;">
@@ -1961,8 +2059,13 @@
                     <!-- PANAFGEO+ -->
                     <div class="project-item enhanced">
                         <div class="project-header">
-                            <div class="project-title-section">
-                                <h3>PanAfGeo+ <span class="project-status" style="background: #3498db;">Planning</span></h3>
+                            <div class="project-main-content">
+                                <div class="project-logo">
+                                    <img src="images/logos/eurogeosurveys-logo.png" alt="EuroGeoSurveys Logo">
+                                </div>
+                                <div class="project-title-section">
+                                    <h3>PanAfGeo+ <span class="project-status" style="background: #3498db;">Planning</span></h3>
+                                </div>
                             </div>
                             <div class="project-badges">
                                 <a href="https://panafgeo.eurogeosurveys.org/" class="project-website" target="_blank">
@@ -2005,8 +2108,13 @@
                     <!-- PANAFGEO2 -->
                     <div class="project-item enhanced">
                         <div class="project-header">
-                            <div class="project-title-section">
-                                <h3>PanAfGeo2 <span class="project-status status-completed">Completed</span></h3>
+                            <div class="project-main-content">
+                                <div class="project-logo">
+                                    <img src="images/logos/eurogeosurveys-logo.png" alt="EuroGeoSurveys Logo">
+                                </div>
+                                <div class="project-title-section">
+                                    <h3>PanAfGeo2 <span class="project-status status-completed">Completed</span></h3>
+                                </div>
                             </div>
                             <div class="project-badges">
                                 <a href="https://panafgeo.eurogeosurveys.org/" class="project-website" target="_blank">
@@ -2038,8 +2146,13 @@
                     <!-- DOURO -->
                     <div class="project-item enhanced">
                         <div class="project-header">
-                            <div class="project-title-section">
-                                <h3>DOURO - Sedimentation Study <span class="project-status status-completed">Completed</span></h3>
+                            <div class="project-main-content">
+                                <div class="project-logo no-logo">
+                                    <i class="fas fa-water"></i>
+                                </div>
+                                <div class="project-title-section">
+                                    <h3>DOURO - Sedimentation Study <span class="project-status status-completed">Completed</span></h3>
+                                </div>
                             </div>
                             <div class="project-badges">
                                 <span class="project-website" style="background: #95a5a6;">
@@ -2071,8 +2184,13 @@
                     <!-- AGEO -->
                     <div class="project-item enhanced">
                         <div class="project-header">
-                            <div class="project-title-section">
-                                <h3>AGEO - Atlantic Geohazard Risk Management <span class="project-status status-completed">Completed</span></h3>
+                            <div class="project-main-content">
+                                <div class="project-logo no-logo">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="project-title-section">
+                                    <h3>AGEO - Atlantic Geohazard Risk Management <span class="project-status status-completed">Completed</span></h3>
+                                </div>
                             </div>
                             <div class="project-badges">
                                 <span class="project-website" style="background: #95a5a6;">
@@ -2104,8 +2222,13 @@
                     <!-- CEGMA 2.0 -->
                     <div class="project-item enhanced">
                         <div class="project-header">
-                            <div class="project-title-section">
-                                <h3>CEGMA 2.0 <span class="project-status status-completed">Completed</span></h3>
+                            <div class="project-main-content">
+                                <div class="project-logo no-logo">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div class="project-title-section">
+                                    <h3>CEGMA 2.0 <span class="project-status status-completed">Completed</span></h3>
+                                </div>
                             </div>
                             <div class="project-badges">
                                 <span class="project-website" style="background: #95a5a6;">
@@ -2137,8 +2260,13 @@
                     <!-- CARACTERIZAÇÃO DE GEOSSÍTIOS -->
                     <div class="project-item enhanced">
                         <div class="project-header">
-                            <div class="project-title-section">
-                                <h3>Caracterização de Geossítios do Vale do Guadiana <span class="project-status status-completed">Completed</span></h3>
+                            <div class="project-main-content">
+                                <div class="project-logo no-logo">
+                                    <i class="fas fa-mountain"></i>
+                                </div>
+                                <div class="project-title-section">
+                                    <h3>Caracterização de Geossítios do Vale do Guadiana <span class="project-status status-completed">Completed</span></h3>
+                                </div>
                             </div>
                             <div class="project-badges">
                                 <span class="project-website" style="background: #95a5a6;">
@@ -2170,8 +2298,13 @@
                     <!-- GEO-FPI -->
                     <div class="project-item enhanced">
                         <div class="project-header">
-                            <div class="project-title-section">
-                                <h3>GEO-FPI - Observatório Transfronteiriço <span class="project-status status-completed">Completed</span></h3>
+                            <div class="project-main-content">
+                                <div class="project-logo no-logo">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="project-title-section">
+                                    <h3>GEO-FPI - Observatório Transfronteiriço <span class="project-status status-completed">Completed</span></h3>
+                                </div>
                             </div>
                             <div class="project-badges">
                                 <span class="project-website" style="background: #95a5a6;">
@@ -2203,8 +2336,13 @@
                     <!-- EXPLORA -->
                     <div class="project-item enhanced">
                         <div class="project-header">
-                            <div class="project-title-section">
-                                <h3>EXPLORA - Neves-Corvo Geological Vectors <span class="project-status status-completed">Completed</span></h3>
+                            <div class="project-main-content">
+                                <div class="project-logo">
+                                    <img src="images/logos/lneg-logo.png" alt="LNEG Logo">
+                                </div>
+                                <div class="project-title-section">
+                                    <h3>EXPLORA - Neves-Corvo Geological Vectors <span class="project-status status-completed">Completed</span></h3>
+                                </div>
                             </div>
                             <div class="project-badges">
                                 <span class="project-website" style="background: #95a5a6;">
@@ -2236,8 +2374,13 @@
                     <!-- ZOM 3D -->
                     <div class="project-item enhanced">
                         <div class="project-header">
-                            <div class="project-title-section">
-                                <h3>ZOM 3D - Ossa Morena Metallogenic Models <span class="project-status status-completed">Completed</span></h3>
+                            <div class="project-main-content">
+                                <div class="project-logo">
+                                    <img src="images/logos/lneg-logo.png" alt="LNEG Logo">
+                                </div>
+                                <div class="project-title-section">
+                                    <h3>ZOM 3D - Ossa Morena Metallogenic Models <span class="project-status status-completed">Completed</span></h3>
+                                </div>
                             </div>
                             <div class="project-badges">
                                 <span class="project-website" style="background: #95a5a6;">
@@ -2269,8 +2412,13 @@
                     <!-- LNEG 2.0 -->
                     <div class="project-item enhanced">
                         <div class="project-header">
-                            <div class="project-title-section">
-                                <h3>LNEG 2.0 - Innovation and Competitiveness <span class="project-status status-completed">Completed</span></h3>
+                            <div class="project-main-content">
+                                <div class="project-logo">
+                                    <img src="images/logos/lneg-logo.png" alt="LNEG Logo">
+                                </div>
+                                <div class="project-title-section">
+                                    <h3>LNEG 2.0 - Innovation and Competitiveness <span class="project-status status-completed">Completed</span></h3>
+                                </div>
                             </div>
                             <div class="project-badges">
                                 <span class="project-website" style="background: #95a5a6;">
